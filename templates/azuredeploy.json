@@ -1,6 +1,6 @@
 {
-  "parameters": {},
-  "variables": {},
-  "resources": [],
-  "outputs": {}
+  "parameters": {bbesiru-VM},
+  "variables": {bbesirustorage},
+  "resources": [ARM-Lab-RG],
+  "outputs": {bbesiru}
 }
