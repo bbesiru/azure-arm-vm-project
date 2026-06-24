@@ -1,6 +1,25 @@
 {
-  "parameters": {bbesiru-VM},
-  "variables": {bbesirustorage},
-  "resources": [ARM-Lab-RG],
-  "outputs": {bbesiru}
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vmName": {
+      "type": "string",
+      "defaultValue": "Bbesiru-VM",
+      "metadata": {
+        "description": "The name of the Virtual Machine."
+      }
+    }
+  },
+  "variables": {
+    "storageAccountName": "[concat('bbesirustorage', uniqueString(resourceGroup().id))]"
+  },
+  "resources": [
+    // This is where your infrastructure resources will be added later
+  ],
+  "outputs": {
+    "finalVmName": {
+      "type": "string",
+      "value": "[parameters('vmName')]"
+    }
+  }
 }
