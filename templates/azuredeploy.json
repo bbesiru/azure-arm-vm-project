@@ -13,8 +13,18 @@
   "variables": {
     "storageAccountName": "[concat('bbesirustorage', uniqueString(resourceGroup().id))]"
   },
-  "resources": [
-    // This is where your infrastructure resources will be added later
+  "resources": [{
+  "type": "Microsoft.Storage/storageAccounts",
+  "apiVersion": "2023-01-01",
+  "name": "[variables('storageAccountName')]",
+  "location": "[resourceGroup().location]",
+  "sku": {
+    "name": "Standard_LRS"
+  },
+  "kind": "StorageV2",
+  "properties": {},
+}
+  
   ],
   "outputs": {
     "finalVmName": {
